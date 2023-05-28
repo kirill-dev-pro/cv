@@ -1,0 +1,28 @@
+---
+import Card from "./Card.astro";
+
+---
+
+<article id="work" class="panel">
+  <header>
+    <h2>Projects</h2>
+  </header>
+  <p>
+    Here is a list of some of my personal projects.  
+  </p>
+  <section class="grid grid-cols-2 gap-4 pt-4">
+    <Card title="PR Explainer" href="https://pr-explainer.kcrz.dev">
+      <img src="images/pr-explainer.png" alt="pr-explainer" class="rounded max-h-56" />
+      AI Github bot that analyzes PRs and comments on them with a summary of the changes.
+    </Card>
+    <Card title="Skechy" href="https://skechy.web.app">
+      <img src="images/skechy.png" alt="skechy" class="rounded max-h-56" />
+      Strucktured meetings application with whiteboard and video chat.
+    </Card>
+    <Card title="Telegram VPN" href="https://t.me/tg_vpn_bot">
+      <img src="images/telegram-vpn.jpeg" alt="tg-vpn" class="rounded" />
+      Anti-censorshit Telegram bot that allows users to access blocked websites with homebrew Wireguard VPN service
+    </Card>
+  </section>
+</article>
+
