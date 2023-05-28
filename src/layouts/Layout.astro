@@ -1,26 +1,41 @@
 ---
-export interface Props {
-	title: string;
-}
-
-const { title } = Astro.props;
+const title = 'Kirill | Digital creator'
+const description = 'Hi! I\'m digital creator and AI enthusiast. Check out my CV and projects.'
 ---
 
 <!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description">
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👨‍💻</text></svg>">
 		<meta name="generator" content={Astro.generator} />
-
+		<!-- Primary Meta Tags -->
 		<title>{title}</title>
+		<meta name="title" content={title}>
+		<meta name="description" content={description}>
+
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website">
+		<meta property="og:url" content="https://kcrz.dev/">
+		<meta property="og:title" content={title}>
+		<meta property="og:description" content={description}>
+		<meta property="og:image" content="images/me.jpeg">
+
+		<!-- Twitter -->
+		<meta property="twitter:card" content="summary_large_image">
+		<meta property="twitter:url" content="https://kcrz.dev/">
+		<meta property="twitter:title" content={title}>
+		<meta property="twitter:description" content={description}>
+		<meta property="twitter:image" content="images/me.jpeg">
+
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
+
 	<body class="is-preload">
 		<div id="wrapper">
 			<slot />
@@ -45,6 +60,7 @@ const { title } = Astro.props;
 	}
 	body {
 		background-image: linear-gradient(45deg, rgb(var(--accent)), #62dace);
+		overflow: auto;
 	}
 	code {
 		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
